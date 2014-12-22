@@ -45,7 +45,7 @@
                
 
             </nav>
-            <a data-toggle="modal" data-target="#myModal" style="float:right;position:absolute;left:1236px;top:7px;background-color:#11ABB0;color:white;padding:5px 20px;">Apply</a>
+            <a data-toggle="modal" data-target="#myModal" style="float:right;position:absolute;left:1236px;top:7px;background-color:#11ABB0;cursor:pointer;color:white;padding:5px 20px;">Apply</a>
          </div>
 
       </div>
@@ -548,6 +548,15 @@ in just 10 Minutes!
 <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
 
 <script>
+function convertToSlug(Text)
+{
+    return Text
+        .toLowerCase()
+        .replace(/ /g,'-')
+        .replace(/[^\w-]+/g,'-')
+        ;
+}
+
 var ref = new Firebase("https://eventstermsheet.firebaseio.com/applications");
 function subform(){
 	var fname = $("#first_name").val();
@@ -560,7 +569,7 @@ function subform(){
 	var vide = $("#video").val();
 	var dek = $("#deck").val();
 	var obj;
-	obj[mail] = { 
+	obj = { 
 			first_name: fname,
 			last_name: lname,
 			startupname: sname,
@@ -571,7 +580,8 @@ function subform(){
 			video: vide,
 			deck: dek
 		};
-	ref.push(obj);
+   var m = convertToSlug(mail);
+	ref.child(m).set(obj);
 }
 </script>
 </html>
