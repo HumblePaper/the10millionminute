@@ -9,6 +9,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
    <link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/layout.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="shortcut icon" href="http://ecell.in/favicon.ico" >
    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,700italic' rel='stylesheet' type='text/css'>
 
@@ -44,7 +45,7 @@
                
 
             </nav>
-            <a target="_blank" href="http://ecell.in/esummit/register"><div style="float:right;position:absolute;left:1236px;top:7px;background-color:#11ABB0;color:white;padding:5px 20px;"><b>Apply</b></div></a>
+            <a data-toggle="modal" data-target="#myModal" style="float:right;position:absolute;left:1236px;top:7px;background-color:#11ABB0;color:white;padding:5px 20px;">Apply</a>
          </div>
 
       </div>
@@ -675,12 +676,90 @@ in just 10 Minutes!
 
    </footer> <!-- Footer End-->
 
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" modalid="myModal2" >
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+         <form name="access" id="id_access" class="form-horizontal" style="margin-top:0px;width:100%;">
+      <div class="modal-header" style="background:#fff;padding-bottom:10px;">
+         <div class="modal-title" id="myModalLabel" style="height:30px;"> 
+            <span style="font-size:17px;color: #222;font-weight:500;float:left;">Application Form</span>
+            <span class="pull-right" data-dismiss="modal"><i class="icon-cancel"></i>
+            </span>
+         </div>
+      </div>
+      <div class="modal-body" style="background:#fff;float:left;padding-top:0;">
+
+      <div class="animate-show" style="background: #fff;float: left;border-radius: 3px;">
+
+            <div class="form-group" style="width:100%;margin:0;margin-bottom:0px;float:left;">
+               <div class="boson-termsheet-heading3">Full Name</div>
+               <input type="text" id="first_name" name="first_name" class="input-medium form-control" style="font-size:15px;height: 30px;box-shadow:none;padding-left:0;width:200px;float:left;margin-right:20px;border: none;" placeholder="First Name" required>
+               <input type="text" id="last_name" name="last_name" class="input-medium form-control" style="font-size:15px;height:30px;box-shadow:none;padding-left:0;width:200px;float:left;border: none;" placeholder="Last Name" required>
+            </div>
+
+            <div class="form-group" style="width:100%;margin:0;margin-bottom:20px;float:left;">
+               <div class="boson-termsheet-heading3">Your startup's details</div>
+               <div class="boson-termsheet-row-clause" style="margin-top:0px;cursor:pointer;float:left;margin-right:10px;">
+
+                  <input type="text" id="startup" name="startup" class="input-medium form-control" placeholder="Name" required>
+               </div>            
+               <div class="boson-termsheet-row-clause" style="margin-top:0px;cursor:pointer;float:left;margin-right:10px;">
+
+                  <input type="text" id="website" name="website" class="input-medium form-control" placeholder="Website" required>
+               </div>            
+
+            </div>
+            <div class="form-group" style="width:100%;margin:0;margin-bottom:20px;float:left;position:relative;">
+               <div class="boson-termsheet-heading3" style="margin-top:0;">Contact details</div>
+
+               <div class="boson-termsheet-row-clause" style="margin-top:0px;cursor:pointer;float:left;margin-right:10px;">
+                  <input type="email" id="email" name="email" class="input-medium form-control" placeholder="Email" required>
+               </div>
+
+               <div class="boson-termsheet-row-clause" style="margin-top:0px;cursor:pointer;float:left;margin-right:10px;">
+                  <input type="tel" id="phonenumber" name="phonenumber" class="input-medium form-control" style="padding-left:40px;" placeholder="Phone Number" required>
+               </div>
+            </div>
+
+            <div class="form-group" style="width:100%;margin:0;margin-bottom:20px;float:left;position:relative;">
+               <div class="boson-termsheet-heading3" style="margin-top:0;">Product</div>
+
+               <textarea tabindex="-1"  type="text" class="boson-termsheet-text mini" placeholder="high concept description" style="font-weight:300;width:100%;margin-top:20px;color:#000;padding:10px;max-height:300px;border:1px solid #ddd;font-size:12px;line-height:1.6;"></textarea>
+
+               <div class="boson-termsheet-row-clause" style="margin-top:20px;cursor:pointer;float:left;margin-right:10px;">
+                  <input type="text" id="video" name="video" class="input-medium form-control" placeholder="link to your team video" required>
+               </div>
+
+               <div class="boson-termsheet-row-clause" style="margin-top:20px;cursor:pointer;float:left;margin-right:10px;">
+                  <input type="text" id="deck" name="deck" class="input-medium form-control" placeholder="link to your deck" required>
+               </div>
+
+            </div>
+
+      </div>
+      </div>
+      <div class="modal-footer" style="background: #fafafa;">
+            <div class="form-group" style="width:100%;margin:0;margin-bottom:0px;margin-top:10px;float:left;">
+                 <input class="btn btn-primary" style="font-size: 14px;padding-top: 5px;margin-bottom:0;" type="submit" value="Submit">
+            </div>
+          <div class="error-message" style="color:#222;"></div>     
+      </div>
+          </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+
+
+</div><!-- /.modal -->  
+
+
    <!-- Java Script
    ================================================== -->
    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 
+   <script src="js/bootstrap.min.js"></script>
    <script src="js/scrollspy.js"></script>
    <script src="js/jquery.flexslider.js"></script>
    <script src="js/jquery.reveal.js"></script>
@@ -688,6 +767,7 @@ in just 10 Minutes!
    <script src="js/gmaps.js"></script>
    <script src="js/init.js"></script>
    <script src="js/smoothscrolling.js"></script>
+
 
 </body>
 

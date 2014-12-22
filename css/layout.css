@@ -114,7 +114,7 @@ properly.
 header {
    height: 54px;
    width: 100%;
-   z-index: 99999;
+   z-index: 999;
    background: url(../images/k-opacity-70.png);
 
    position: fixed;
